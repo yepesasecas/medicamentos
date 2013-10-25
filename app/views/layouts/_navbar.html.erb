@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default" role="navigation">
+
+  <div class="navbar-header">
+    <%= link_to "Pacientes", patients_path, :class =>"navbar-brand" %>
+  </div>
+  <ul class="nav navbar-nav">
+  	<li><%= link_to "Medicamentos", medicines_path %></li>
+    <li><%= link_to "Cantidades", amounts_path %></li>
+    <li><%= link_to "Frecuencias", frequencies_path %></li>
+    <li><%= link_to "Duraciones", durations_path %></li>
+  </ul>
+</nav>

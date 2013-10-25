@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @amount.cantidad %>
+</p>
+
+<p>
+  <strong>Unidad:</strong>
+  <%= @amount.unidad %>
+</p>
+
+<%= link_to 'Edit', edit_amount_path(@amount) %> |
+<%= link_to 'Back', amounts_path %>

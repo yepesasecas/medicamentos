@@ -1,0 +1,34 @@
+<h3>Pacientes</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Documento identidad</th>
+      <th>Fecha nacimiento</th>
+      <th>Edad</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.nombre_completo %></td>
+        <td><%= patient.documento_identidad %></td>
+        <td><%= patient.fecha_nacimiento %></td>
+        <td><%= patient.edad %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h3>Agregar Paciente</h3>
+<%= link_to 'New Patient', new_patient_path %>

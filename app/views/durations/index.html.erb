@@ -1,0 +1,29 @@
+<h1>Duraciones</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Duracion</th>
+      <th>Dias duracion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @durations.each do |duration| %>
+      <tr>
+        <td><%= duration.duracion %></td>
+        <td><%= duration.dias_duracion %></td>
+        <td><%= link_to 'Show', duration %></td>
+        <td><%= link_to 'Edit', edit_duration_path(duration) %></td>
+        <td><%= link_to 'Destroy', duration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>Agregar duracion</h2>
+<%= render "form" %>

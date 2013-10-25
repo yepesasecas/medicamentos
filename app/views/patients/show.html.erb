@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @patient.nombre_completo %></h1>
+<p>
+  <strong>Documento identidad:</strong>
+  <%= @patient.documento_identidad %>
+</p>
+
+<p>
+  <strong>Fecha nacimiento:</strong>
+  <%= @patient.fecha_nacimiento %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @patient.edad %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @patient.telefono %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @patient.celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @patient.email %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @patient.direccion %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

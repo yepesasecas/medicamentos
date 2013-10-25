@@ -1,0 +1,29 @@
+<h1>Frecuencias</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Frecuencia</th>
+      <th>Horas frecuencia</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @frequencies.each do |frequency| %>
+      <tr>
+        <td><%= frequency.frecuencia %></td>
+        <td><%= frequency.horas_frecuencia %></td>
+        <td><%= link_to 'Show', frequency %></td>
+        <td><%= link_to 'Edit', edit_frequency_path(frequency) %></td>
+        <td><%= link_to 'Destroy', frequency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>Agregar Frecuencia</h2>
+<%= render "form" %>

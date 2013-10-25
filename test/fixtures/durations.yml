@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  duracion: MyString
+  dias_duracion: 1
+
+two:
+  duracion: MyString
+  dias_duracion: 1

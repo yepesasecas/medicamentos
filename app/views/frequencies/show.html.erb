@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Frecuencia:</strong>
+  <%= @frequency.frecuencia %>
+</p>
+
+<p>
+  <strong>Horas frecuencia:</strong>
+  <%= @frequency.horas_frecuencia %>
+</p>
+
+<%= link_to 'Edit', edit_frequency_path(@frequency) %> |
+<%= link_to 'Back', frequencies_path %>

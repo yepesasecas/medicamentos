@@ -1,0 +1,29 @@
+<h1>Cantidades</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Cantidad</th>
+      <th>Unidad</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amounts.each do |amount| %>
+      <tr>
+        <td><%= amount.cantidad %></td>
+        <td><%= amount.unidad %></td>
+        <td><%= link_to 'Show', amount %></td>
+        <td><%= link_to 'Edit', edit_amount_path(amount) %></td>
+        <td><%= link_to 'Destroy', amount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h1>Agregar Cantidad</h1>
+<%= render "form" %>

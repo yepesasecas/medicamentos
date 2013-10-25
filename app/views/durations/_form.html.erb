@@ -1,0 +1,25 @@
+<%= form_for(@duration) do |f| %>
+  <% if @duration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@duration.errors.count, "error") %> prohibited this duration from being saved:</h2>
+
+      <ul>
+      <% @duration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :duracion %><br>
+    <%= f.text_field :duracion %>
+  </div>
+  <div class="field">
+    <%= f.label :dias_duracion %><br>
+    <%= f.number_field :dias_duracion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
